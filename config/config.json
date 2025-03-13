@@ -1,0 +1,15 @@
+{
+  "development": {
+    "username": "sa",
+    "password": "DmX08775416421",
+    "database": "loginTest",
+    "host": "PLBIC14",
+    "dialect": "mssql",
+    "dialectOptions": {
+      "instance": "SQLEXPRESS",
+      "useUTC": "false",
+      "dateStrings": true,
+      "typeCast": true
+    }
+  }
+}
