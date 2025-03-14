@@ -25,7 +25,7 @@ class JWT {
         const token = req.header("Authorization")?.split(" ")[1]; // Get token from Authorization header
         // console.log(token)
         if (!token) {
-            res.send({ result: "ng", detail: "No token provided" });
+            res.status(403).send({ result: "ng", detail: "No token provided" });
         }
 
         try {
@@ -34,7 +34,7 @@ class JWT {
             next(); // Proceed to the next middleware or route handler
         } catch (err) {
             console.log(err)
-            res.send({ result: "ng", detail: "Invalid or expired token" });
+            res.status(500).send({ result: "ng", detail: "Invalid or expired token" });
         }
     }
     // Middleware to check if user is a regular production
