@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "backend",
   "version": "1.0.0",
   "description": "",
@@ -6,15 +7,33 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+=======
+  "name": "01.jwt_test_backend_revise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+>>>>>>> 957b140 (update)
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+<<<<<<< HEAD
+=======
+    "body-parser": "^1.20.3",
+>>>>>>> 957b140 (update)
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "sequelize": "^6.37.6",
+<<<<<<< HEAD
     "sequelize-cli": "^6.6.2",
+=======
+>>>>>>> 957b140 (update)
     "tedious": "^18.6.1"
   }
 }

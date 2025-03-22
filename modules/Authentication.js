@@ -102,12 +102,19 @@ const LogIn = async (emp_no, password) => {
 const LogInJwt = async (emp_no, password) => {
   const createToken = (emp_no) => {
     const token = jwt.sign({ emp_no: emp_no }, "secret", {
+<<<<<<< HEAD
       expiresIn: '2min',
+=======
+      expiresIn: '5min',
+>>>>>>> 957b140 (update)
     });
     return token;
   };
   emp_no = String(emp_no).toLocaleLowerCase();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 957b140 (update)
   let get_password = await models.Authentication.findOne({
     where: { emp_no: emp_no },
     raw: true,

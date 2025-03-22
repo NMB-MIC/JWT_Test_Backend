@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // const dotenv = require("dotenv");
 const jwt = require("jsonwebtoken");
 
@@ -63,3 +64,32 @@ class JWT {
 }
 
 module.exports = new JWT();
+=======
+const jwt = require("jsonwebtoken");
+
+class JWT {
+  // Middleware to verify JWT token
+  async verifyToken(req, res, next) {
+    // console.log(req);
+    const token = req.header("Authorization")?.split(" ")[1]; // Get token from Authorization header
+    console.log(token)
+    if (!token) {
+      res.status(403).send({ result: "ng", detail: "No token provided" });
+    }
+
+    try {
+      const decoded = jwt.verify(token, "secret");
+      req.user = decoded; // Add user info to request
+      next(); // Proceed to the next middleware or route handler
+    } catch (err) {
+      console.log(err);
+      res
+        .status(500)
+        .send({ result: "ng", detail: "Invalid or expired token" });
+    }
+  }
+}
+
+
+module.exports = new JWT();
+>>>>>>> 957b140 (update)
