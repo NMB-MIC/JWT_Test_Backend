@@ -3,7 +3,6 @@ const router = express.Router();
 const moduleUsage = require("../modules/Authentication");
 const jwt = require("../middlewares/jwt");
 
-<<<<<<< HEAD
 
 router.post("/singup", async (req, res) => {
     try {
@@ -14,7 +13,7 @@ router.post("/singup", async (req, res) => {
     } catch (error) {
     }
 }); 
-=======
+
 router.get("/open", async (req, res) => {
   try {
     console.log("hi");
@@ -32,7 +31,6 @@ router.post("/singup", async (req, res) => {
     res.send(result);
   } catch (error) {}
 });
->>>>>>> 957b140 (update)
 
 // router.get(`/login`, async (req, res) => {
 //   try {
@@ -52,7 +50,7 @@ router.post("/singup", async (req, res) => {
 //   } catch (error) {}
 // });
 router.post(`/login`, async (req, res) => {
-<<<<<<< HEAD
+
     try {
       let emp_no = req.body.emp_no;
       let password = req.body.password;
@@ -70,25 +68,7 @@ router.post("/login-jwt", async (req, res) => {
       res.send(result);
     } catch (error) {}
   });
-=======
-  try {
-    let emp_no = req.body.emp_no;
-    let password = req.body.password;
-    let result = await moduleUsage.LogIn(emp_no, password);
-    res.send(result);
-  } catch (error) {}
-});
 
-router.post("/login-jwt", async (req, res) => {
-  try {
-    let emp_no = req.body.emp_no;
-    let password = req.body.password;
-    let result = await moduleUsage.LogInJwt(emp_no, password);
-    console.log(result);
-    res.send(result);
-  } catch (error) {}
-});
->>>>>>> 957b140 (update)
 
 router.get("/get_authen", async (req, res) => {
   try {
@@ -109,7 +89,6 @@ router.get("/get_authen_jwt", jwt.verifyToken, async (req, res) => {
   }
 });
 
-<<<<<<< HEAD
 router.put('/accept_signup', jwt.verifyToken, async (req, res) => {
     try {
         const { emp_no } = req.body
@@ -119,17 +98,5 @@ router.put('/accept_signup', jwt.verifyToken, async (req, res) => {
         res.send(error);
     }
 })
-
-=======
-router.put("/accept_signup", jwt.verifyToken, async (req, res) => {
-  try {
-    const { emp_no } = req.body;
-    let result = await moduleUsage.AcceptSignUp(emp_no);
-    res.send(result);
-  } catch (error) {
-    res.send(error);
-  }
-});
->>>>>>> 957b140 (update)
 
 module.exports = router;
