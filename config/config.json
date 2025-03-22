@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "development": {
     "username": "sa",
     "password": "Sa@Admin",
@@ -13,19 +12,3 @@
     }
   }
 }
-=======
-    "development": {
-      "username": "sa",
-      "password": "Sa@Admin",
-      "database": "loginTest",
-      "host": "192.168.100.30",
-      "dialect": "mssql",
-      "dialectOptions": {
-        "useUTC": "false",
-        "dateStrings": true,
-        "typeCast": true
-      }
-    }
-  }
-  
->>>>>>> 957b140 (update)
